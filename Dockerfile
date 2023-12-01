@@ -1,9 +1,11 @@
-FROM golang:1.14
+FROM golang:1.16
 LABEL maintainer "tomas@aparicio.me"
 
 ARG LIBVIPS_VERSION=8.9.2
 ARG LIBHEIF_VERSION=1.9.1
 ARG GOLANGCILINT_VERSION=1.29.0
+
+ENV GO111MODULE=off
 
 # Installs libvips + required libraries
 RUN DEBIAN_FRONTEND=noninteractive \
